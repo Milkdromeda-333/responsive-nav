@@ -1,0 +1,82 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #FE6EF6;
+  color: black;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6EFE76;
+  
+}
+h1{
+  font-size: 25px;
+    margin: 1rem;
+}
+.navbar-links{
+  height: 100%;
+}
+ul{
+  display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a{
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
+  display: block;
+}
+
+nav li:hover{
+  background-color: #65E26C;
+}
+
+.toggle-bars{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: none;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px){
+  .toggle-bars{
+    display: block;
+  }
+  .navbar-links{
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+nav{
+    flex-direction: column;
+    
+   align-items: flex-start;
+  }
+  ul{
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  nav a{
+    padding: 13px;
+  }
+  
+.navbar-links.active{
+    display: flex;
+  } 
+/* this part makes the nav bar appear as flexed after it is toggled to have the class name active using the Javascript file. */
+}
